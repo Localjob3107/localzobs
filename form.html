@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <div class="container">
+        
+
+        <div id="jobSeeker" class="tab-content active">
+            <form id="jobSeekerForm">
+                <h2>Job Seeker Registration</h2>
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="input-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                <div class="input-group">
+                    <label for="whatsapp">WhatsApp Number</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" value="Gujarat" disabled>
+                </div>
+                <div class="input-group">
+                    <label for="district">District</label>
+                    <select name="district" id="district" required></select>
+                </div>
+                <div class="input-group">
+                    <label for="taluka">Taluka</label>
+                    <select name="taluka" id="taluka" required></select>
+                </div>
+                <div class="input-group">
+                    <label for="lastQualification">Last Qualification</label>
+                    <input type="text" id="lastQualification" name="lastQualification" required>
+                </div>
+                <div class="input-group">
+                    <label for="technicalQualification">Technical Qualification</label>
+                    <input type="text" id="technicalQualification" name="technicalQualification" required>
+                </div>
+                <div class="input-group">
+                    <label for="experienceInWords">If Any Experience (in words)</label>
+                    <input type="text" id="experienceInWords" name="experienceInWords">
+                </div>
+                <div class="input-group">
+                    <label for="experienceInYears">Experience (in years)</label>
+                    <input type="number" id="experienceInYears" name="experienceInYears">
+                </div>
+                <div class="input-group">
+                    <label for="preferredJobLocation">Preferred Job Location</label>
+                    <input type="text" id="preferredJobLocation" name="preferredJobLocation" required>
+                </div>
+                <div class="inline-radio-container">
+                    <div class="radio-group">
+                        <label>Work outside your city?</label>
+                        <div class="radio-options">
+                            <input type="radio" id="outsideCityYes" name="outsideCity" value="Yes" required>
+                            <label for="outsideCityYes">Yes</label>
+                            <input type="radio" id="outsideCityNo" name="outsideCity" value="No">
+                            <label for="outsideCityNo">No</label>
+                        </div>
+                    </div>
+                    <div class="radio-group">
+                        <label>Work abroad?</label>
+                        <div class="radio-options">
+                            <input type="radio" id="abroadYes" name="abroad" value="Yes" required>
+                            <label for="abroadYes">Yes</label>
+                            <input type="radio" id="abroadNo" name="abroad" value="No">
+                            <label for="abroadNo">No</label>
+                        </div>
+                    </div>
+                </div>
+                <label for="resume" class="file-upload-label">Upload Resume/CV</label>
+                <input id="resume" type="file" name="resume" accept=".pdf,.doc,.docx" required class="file-input">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div id="jobProvider" class="tab-content">
+            <form id="jobProviderForm">
+                <h2>Job Provider Registration</h2>
+                <input type="text" name="companyName" placeholder="Company Name" required>
+                <input type="text" name="companyAddress" placeholder="Company Address" required>
+                <input type="text" name="authorizedPerson" placeholder="Authorized Person Name" required>
+                <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required>
+                <input type="email" name="email" placeholder="Email ID" required>
+                
+                <div id="vacancyContainer">
+                    <label class="group-label">Vacancy Details</label>
+                    <div class="vacancy-entry">
+                        <div class="input-group">
+                            <label for="postName">Post Name / Designation</label>
+                            <input type="text" id="postName" name="postName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="vacancyCount">Number of Vacancies</label>
+                            <input type="number" id="vacancyCount" name="vacancyCount" min="1" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="minSalary">Minimum Salary</label>
+                            <input type="number" id="minSalary" name="minSalary" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="maxSalary">Maximum Salary</label>
+                            <input type="number" id="maxSalary" name="maxSalary" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="incentive">Incentive (if any)</label>
+                            <input type="text" id="incentive" name="incentive">
+                        </div>
+                        <div class="input-group">
+                            <label for="requiredExperience">Required Experience (in years)</label>
+                            <input type="number" id="requiredExperience" name="requiredExperience" min="0" required>
+                        </div>
+                        <!-- Remove button will be added by JS for subsequent entries -->
+                    </div>
+                </div>
+                <button type="button" id="addVacancyBtn">+ Add Another Post</button>
+
+                <textarea name="jobDescription" placeholder="Overall Job Description" required></textarea>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

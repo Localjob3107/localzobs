@@ -1,0 +1,71 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    text-align: center;
+}
+
+.home-container {
+    max-width: 800px;
+    padding: 3em;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-weight: 700;
+    color: #0056b3;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+
+header h2 {
+    font-weight: 500;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
+}
+
+.intro {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2.5em;
+}
+
+.registration-section h3 {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #0056b3;
+    margin-bottom: 1em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8em 2.5em;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #007bff;
+    transform: translateY(-5px);
+}

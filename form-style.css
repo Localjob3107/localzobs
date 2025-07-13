@@ -1,0 +1,268 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #eef2f7;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 3em;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dce3ec;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5em;
+    border-bottom: 2px solid #dce3ec;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #6c757d;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tab-button.active {
+    color: #0056b3;
+    border-bottom: 3px solid #0056b3;
+}
+
+.tab-content {
+    display: none;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+}
+
+h2 {
+    grid-column: 1 / -1; /* Span across all columns */
+    margin-bottom: 1.2em;
+    color: #343a40;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.input-group label {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+    color: #495057;
+    text-align: left;
+    width: 100%;
+}
+
+input, select, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    padding: 1em;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.inline-radio-container {
+    grid-column: 1 / -1; /* Span across all columns */
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.radio-group label {
+    font-size: 0.95em;
+    color: #495057;
+}
+
+.radio-options {
+    display: flex;
+    gap: 1.5em;
+}
+
+.radio-options input[type="radio"] {
+    display: none;
+}
+
+.radio-options label {
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.radio-options input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.file-upload-label {
+    grid-column: 1 / -1; /* Span across all columns */
+    display: block;
+    margin-bottom: -1em;
+    font-size: 0.95em;
+    color: #495057;
+    text-align: left;
+}
+
+.file-input {
+    padding: 1.2em;
+}
+
+button[type="submit"] {
+    grid-column: 1 / -1; /* Span across all columns */
+    background: linear-gradient(90deg, #0062E6, #33AEFF);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 98, 230, 0.3);
+}
+
+#vacancyContainer {
+    grid-column: 1 / -1; /* Span across all columns */
+    border: 1px solid #dce3ec;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-top: 1em;
+    background-color: #f8f9fa;
+}
+
+.group-label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1em;
+}
+
+.vacancy-entry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-bottom: 1em;
+    align-items: flex-start; /* Align items to the start of their grid area */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.input-group label {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+    color: #495057;
+    text-align: left;
+    width: 100%;
+}
+
+.vacancy-entry input {
+    margin-bottom: 0; /* Remove default margin from previous input styles */
+}
+
+#addVacancyBtn, .remove-vacancy-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: -0.5em;
+    transition: background-color 0.3s;
+}
+
+#addVacancyBtn {
+    grid-column: 1 / -1; /* Span across all columns */
+    width: auto; /* Adjust width for button */
+    align-self: center; /* Center the button */
+    margin: 1em auto 0; /* Add margin and center */
+}
+
+.remove-vacancy-btn {
+    background-color: #dc3545;
+    align-self: center; /* Center the remove button vertically */
+    margin-top: 1.5em; /* Adjust margin to align with inputs */
+}
+
+.remove-vacancy-btn:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2em;
+    }
+    .inline-radio-container {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    form {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5em;
+    }
+    .tab-button {
+        padding: 1em 0.8em;
+        font-size: 1em;
+    }
+}
